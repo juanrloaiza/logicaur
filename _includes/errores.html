@@ -1,0 +1,28 @@
+<div class="row">
+  {% for error in errores %}
+  <div class="ejercicio col-lg-4 col-sm-12">
+    <table rules="groups" class="terrores">
+      <thead>
+        {% assign steps = 1 %}
+        {% for premisa in error.premisas %}
+        <tr>
+          <td>{{ steps }}</td>
+          <td>{{ premisa }}</td>
+        </tr>
+        {% assign steps = steps | plus: 1%}
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for conclusion in error.conclusiones %}
+        <tr>
+          <td>{{ steps }}</td>
+          <td>{{ conclusion[0] }}</td>
+          <td class="error">{{ conclusion[1] }}</td>
+        </tr>
+        {% assign steps = steps | plus: 1%}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>

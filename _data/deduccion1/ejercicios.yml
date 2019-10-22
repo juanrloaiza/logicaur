@@ -1,0 +1,20 @@
+- objetivo: Tanto Alex como Dani son madres
+  premisas:
+    - Alex y Dani son madres solteras
+  conclusiones:
+
+- objetivo: Qb
+  premisas:
+    - Pa & (Qb & Rc)
+
+- objetivo: Dd & Aa
+  premisas:
+    - (Aa & Bb) & (Cc & Dd)
+
+- objetivo: Pa & (Pb & Pc)
+  premisas:
+    - (Pa & Pb) & Pc
+
+- objetivo: Leo estudió matemáticas o física
+  premisas:
+    - Leo estudió matemáticas

@@ -1,0 +1,25 @@
+- nombre: Simplificación (Simpl)
+  premisas:
+    - P & Q
+  conclusiones:
+    - Q
+
+- nombre: Conjunción (Conj)
+  premisas:
+    - P
+    - Q
+  conclusiones:
+    - P & Q
+
+- nombre: Adición (Add)
+  premisas:
+    - P
+  conclusiones:
+    - P v Q
+
+- nombre: Silogismo Disyuntivo (SD)
+  premisas:
+    - P v Q
+    - ~P
+  conclusiones:
+    - Q

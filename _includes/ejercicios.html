@@ -1,0 +1,28 @@
+<div class="row">
+  {% for ejercicio in ejercicios %}
+  <div class="ejercicio col-lg-4 col-sm-12">
+    <div class="objetivo">
+    <span class="numero">{{ forloop.index }}</span>) {{ ejercicio.objetivo }}
+    </div>
+    <table rules="groups">
+      <thead>
+        {% for premisa in ejercicio.premisas %}
+        <tr>
+          <td>{{ premisa }}</td>
+        </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for conclusion in ejercicio.conclusiones %}
+        <tr>
+          <td>{{ conclusion }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,50 @@
+table {
+  border-left: 1px solid black;
+  margin-left: 1em;
+}
+
+thead, tbody {
+  border: 0;
+}
+
+thead tr:last-child td{
+  border-bottom: 1px solid black;
+}
+
+td {
+  padding-bottom: 0.5em;
+  padding-left: 0.3em;
+  padding-right: 0.3em
+}
+
+.ejercicio {
+  margin: 1em 0;
+}
+
+.objetivo {
+  margin-bottom: 0.5em;
+}
+
+.numero {
+  font-weight: bold;
+}
+
+.terrores{
+  border-left: 0;
+
+  thead tr td {
+    border: 0
+  }
+
+  thead tr:last-child td:nth-child(2){
+    border-bottom: 1px solid black;
+  }
+
+  td:first-child{
+    border-right: 1px solid black;
+  }
+
+  .error {
+    text-decoration: line-through;
+  }
+}

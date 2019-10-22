@@ -1,0 +1,21 @@
+<div class="ejercicio col-lg-4 col-sm-12">
+  <div class="nombre">
+    {{ regla.nombre }}
+  </div>
+  <table rules="groups">
+    <thead>
+      {% for premisa in regla.premisas %}
+      <tr>
+        <td>{{ premisa }}</td>
+      </tr>
+      {% endfor %}
+    </thead>
+    <tbody>
+      {% for conclusion in regla.conclusiones %}
+      <tr>
+        <td>{{ conclusion }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

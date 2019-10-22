@@ -1,0 +1,37 @@
+- premisas:
+  - ~[(P & R) & Q]
+  conclusiones:
+    - - P
+      - Simpl 1
+
+- premisas:
+  - ~(P & Q)
+  conclusiones:
+    - - ~P
+      - Simpl 1
+
+- premisas:
+  - P v (Q & R)
+  conclusiones:
+    - - P v Q
+      - Simpl 1
+
+- premisas:
+  - P v Q
+  conclusiones:
+    - - P
+      - Simpl 1
+
+- premisas:
+  - P v Q
+  - P
+  conclusiones:
+    - - Q
+      - SD 1, 2
+
+- premisas:
+  - ~P v ~Q
+  - Q
+  conclusiones:
+    - - P
+      - SD 1, 2

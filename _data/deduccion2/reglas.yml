@@ -1,25 +1,26 @@
 - nombre: Modus (Ponendo) Ponens (MP)
-  premisas:
-    - P -> Q
-    - P
-  conclusiones:
-    - Q
+  reglas:
+    - premisas:
+      - P -> Q
+      - P
+      conclusiones:
+        - Q
 
 - nombre: Modus (Tollendo) Tollens (MT)
-  premisas:
-    - P -> Q
-    - ~Q
-  conclusiones:
-    - P
+  reglas:
+    - premisas:
+      - P -> Q
+      - ~Q
+      conclusiones:
+        - P
 
 - nombre: Descoposición bicondicional (DB)
-  premisas:
-    - P <-> Q
-  conclusiones:
-    - P -> Q
-
-- nombre:
-  premisas:
-    - P <-> Q
-  conclusiones:
-    - Q -> P
+  reglas:
+    - premisas:
+      - P <-> Q
+      conclusiones:
+        - P -> Q
+    - premisas:
+      - P <-> Q
+      conclusiones:
+        - Q -> P

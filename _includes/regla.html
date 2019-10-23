@@ -1,7 +1,8 @@
 <div class="ejercicio col-lg-4 col-sm-12">
   <div class="nombre">
-    {{ regla.nombre }}
+    {{ regla_general.nombre }}
   </div>
+  {% for regla in regla_general.reglas %}
   <table rules="groups">
     <thead>
       {% for premisa in regla.premisas %}
@@ -18,4 +19,6 @@
       {% endfor %}
     </tbody>
   </table>
+  <br>
+  {% endfor %}
 </div>

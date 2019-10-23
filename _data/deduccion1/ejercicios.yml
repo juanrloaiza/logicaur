@@ -18,3 +18,69 @@
 - objetivo: Leo estudió matemáticas o física
   premisas:
     - Leo estudió matemáticas
+
+- objetivo: Ale cocina o se baña y canta
+  premisas:
+    - Ale cocina
+    - Ale canta
+
+- objetivo: Pa & (Pb v Pc)
+  premisas:
+    - Pa & Qa
+    - Pb & Qb
+
+- objetivo: Pedro no baila o no canta
+  premisas:
+    - Ni Pedro ni Omar bailan
+
+- objetivo: (Pa & Qb) & (Rc v Rd)
+  premisas:
+    - Pa & (Rc -> Qb)
+    - (Pa v Qb) & Rd
+    - (Ra & Qb) & Pb
+
+- objetivo: Pb v (Pa <-> Pc)
+  premisas:
+    - Pa & Pb
+    - Pb & Pc
+
+- objetivo: Algunos son carros
+  premisas:
+    - Algunos son carros o todos son motos
+    - No todos son carros
+
+- objetivo: ~(:existe:x)Px
+  premisas:
+    - ~(:existe:x)Px v ~(:existe:x)Qx
+    - ~~(:existe:x)Qx
+
+- objetivo: Camila no toca el piano
+  premisas:
+    - Alguna de las dos no toca el piano
+    - Andrea sí toca el piano
+
+- objetivo: ~(:existe:x)Px
+  premisas:
+    - ~(:existe:x)Px v (:todo:x)Px
+    - ~(:todo:x)Px
+
+- objetivo: Bernardo o Elías irán
+  premisas:
+    - Andrea y Bernardo irán o Camila irá
+    - Ni Camila ni Diego irán
+
+- objetivo: No hay nadie que baile
+  premisas:
+    - Todos cantan o nadie baila
+    - Alguien no canta
+
+- objetivo: Pa
+  premisas:
+    - Pb & ~Pc
+    - Pa v Pb
+    - Pa v Pc
+
+- objetivo: Todos cantan
+  premisas:
+    - Todos cantan o nadie lo hace
+    - Algunos cantan

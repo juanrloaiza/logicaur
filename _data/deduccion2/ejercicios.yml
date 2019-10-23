@@ -1,0 +1,95 @@
+- objetivo: Qab v Sb
+  premisas:
+    - Pa -> Qab
+    - Pa & Ra
+
+- objetivo: Manu va a la fiesta
+  premisas:
+    - Si Alex o Dani van, Leo y Manu van
+    - Alex va a la fiesta
+
+- objetivo: Ra & Sb
+  premisas:
+    - (Pa & Qab) -> Ra
+    - Pa & Sb
+    - Tba & Qab
+
+- objetivo: Ra
+  premisas:
+    - Pa -> Ra
+    - Pa v Qab
+    - ~Qab
+
+- objetivo: Sb
+  premisas:
+    - (Pa v Qab) -> Sb
+    - Pa & Tba
+    - ~Ra & Qab
+
+- objetivo: Ra
+  premisas:
+    - Pa -> (Qab -> Ra)
+    - Pa & Qab
+
+- objetivo: Ra
+  premisas:
+    - Pa -> (Qab v Ra)
+    - Pa & ~Qab
+
+- objetivo: Pa
+  premisas:
+    - Pa -> Qab
+    - Ra -> Pa
+    - Qab & Ra
+
+- objetivo: Qab
+  premisas:
+    - (Qab & Ra) <-> Pa
+    - Ra & Pa
+
+- objetivo: ~Pa
+  premisas:
+    - Pa -> Qab
+    - ~Qab & ~Ra
+
+- objetivo: Pa
+  premisas:
+    - ~Pa -> ~Qab
+    - Ra & Qab
+
+- objetivo: ~Ra
+  premisas:
+    - ~Pa v ~Qab
+    - Pa & Sb
+    - Ra -> Qab
+
+- objetivo: ~Pa
+  premisas:
+    - Pa <-> Qab
+    - ~Qab & ~Ra
+
+- objetivo: Pa v Ra
+  premisas:
+    - (Pa & Qab) <-> (Qab v Ra)
+    - Qab
+
+- objetivo: (Tba & ~Sb) v (~Tba & Sb)
+  premisas:
+    - ~Ra v Sb
+    - Tba -> ~Pa
+    - Ra & Pa
+
+- objetivo: No pasé
+  premisas:
+    - Pasaba si y solo si estudiaba
+    - En vez de estudiar, jugué Picas y fijas
+
+- objetivo: Trabajo y tengo beca
+  premisas:
+    - Estudio solo si tengo beca
+    - Trabajo y estudio
+
+- objetivo: Algunos no cantan
+  premisas:
+    - Si todos cantan, nadie baila
+    - Algunos bailan

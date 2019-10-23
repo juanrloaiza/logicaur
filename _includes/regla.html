@@ -6,14 +6,14 @@
     <thead>
       {% for premisa in regla.premisas %}
       <tr>
-        <td>{{ premisa }}</td>
+        <td>{{ premisa | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
       </tr>
       {% endfor %}
     </thead>
     <tbody>
       {% for conclusion in regla.conclusiones %}
       <tr>
-        <td>{{ conclusion }}</td>
+        <td>{{ conclusion | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
       </tr>
       {% endfor %}
     </tbody>

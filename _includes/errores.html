@@ -1,13 +1,19 @@
+{% assign errores = site.data[page.data].errores %}
+
 <div class="row">
-  {% for error in errores %}
+  {% for error in errores.errores %}
+  <div class="aclaracion">
+    {{ errores.aclaraciones[forloop.index] | markdownify }}
+  </div>
   <div class="ejercicio col-lg-4 col-sm-12">
+    {{ error.nombre }}
     <table rules="groups" class="terrores">
       <thead>
         {% assign steps = 1 %}
         {% for premisa in error.premisas %}
         <tr>
           <td>{{ steps }}</td>
-          <td>{{ premisa }}</td>
+          <td>{{ premisa | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
         </tr>
         {% assign steps = steps | plus: 1%}
         {% endfor %}
@@ -16,8 +22,8 @@
         {% for conclusion in error.conclusiones %}
         <tr>
           <td>{{ steps }}</td>
-          <td>{{ conclusion[0] }}</td>
-          <td class="error">{{ conclusion[1] }}</td>
+          <td>{{ conclusion[0] | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
+          <td class="error">{{ conclusion[1] | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
         </tr>
         {% assign steps = steps | plus: 1%}
         {% endfor %}

@@ -10,15 +10,24 @@
 <body>
   <div class="container">
     <div class="row">
-      <div id="nav" class="col-3">
+      <!-- <div id="nav" class="col-3">
         {% include nav.html %}
-      </div>
+      </div> -->
       <div id="content" class="col-9">
         <div class="container">
           <p class="lead">{{ page.subtitle }}</p>
           <h1>{{ page.title }}</h1>
           <hr>
           {{ content }}
+
+          <h3>Errores comunes</h3>
+          <hr>
+          {% include errores.html %}
+
+          <h3>Ejercicios de práctica</h3>
+          <hr>
+          {% include ejercicios.html %}
+
         </div>
       </div>
     </div>

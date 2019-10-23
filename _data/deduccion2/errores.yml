@@ -1,0 +1,46 @@
+errores:
+  - premisas:
+    - P -> Q
+    conclusiones:
+      - - P
+        - Simpl 1
+
+  - premisas:
+    - P -> Q
+    conclusiones:
+      - - Q
+        - Simpl 1
+  - nombre: Falacia de afirmación del consecuente
+    premisas:
+    - P -> Q
+    - Q
+    conclusiones:
+      - - P
+        - MP 1 y 2
+
+  - nombre: Falacia de negación del antecedente
+    premisas:
+    - P -> Q
+    - ~P
+    conclusiones:
+      - - ~Q
+        - Simpl 1
+
+  - premisas:
+    - ~(P -> Q)
+    - P
+    conclusiones:
+      - - Q
+        - MP 1 y 2
+
+  - premisas:
+    - ~(P <-> Q)
+    conclusiones:
+      - - ~(P -> Q)
+        - DB 1
+
+
+aclaraciones:
+  1: De un condicional por sí solo no se sigue ninguna de sus dos partes
+  3: Estas inferencias _parecen_ correctas pero son falaces porque la conclusión no se sigue de las premisas necesariamente.
+  5: El condicional o el bicondicional debe ser el operador lógico principal.

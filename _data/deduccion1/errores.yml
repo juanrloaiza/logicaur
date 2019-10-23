@@ -1,37 +1,45 @@
-- premisas:
-  - ~[(P & R) & Q]
-  conclusiones:
-    - - P
-      - Simpl 1
+errores:
+  - premisas:
+    - ~[(P & R) & Q]
+    conclusiones:
+      - - P
+        - Simpl 1
 
-- premisas:
-  - ~(P & Q)
-  conclusiones:
-    - - ~P
-      - Simpl 1
+  - premisas:
+    - ~(P & Q)
+    conclusiones:
+      - - ~P
+        - Simpl 1
 
-- premisas:
-  - P v (Q & R)
-  conclusiones:
-    - - P v Q
-      - Simpl 1
+  - premisas:
+    - P v (Q & R)
+    conclusiones:
+      - - P v Q
+        - Simpl 1
 
-- premisas:
-  - P v Q
-  conclusiones:
-    - - P
-      - Simpl 1
+  - premisas:
+    - P v Q
+    conclusiones:
+      - - P
+        - Simpl 1
 
-- premisas:
-  - P v Q
-  - P
-  conclusiones:
-    - - Q
-      - SD 1, 2
+  - premisas:
+    - P v Q
+    - P
+    conclusiones:
+      - - Q
+        - SD 1, 2
 
-- premisas:
-  - ~P v ~Q
-  - Q
-  conclusiones:
-    - - P
-      - SD 1, 2
+  - premisas:
+    - ~P v ~Q
+    - Q
+    conclusiones:
+      - - P
+        - SD 1, 2
+
+aclaraciones:
+  1: En estos cuatro casos se intenta aplicar _Simplificación_ en una fórmula cuyo operador lógico principal no es una conjunción. En los dos primeros es la negación y en los otros dos es la disyunción.
+  5: |
+    En estos dos casos siguientes se aplica equivocadamente el _Silogismo disyuntivo_. Primero porque SD dice que si negamos un disyunto, podemos afirmar el otro, no que si afirmamos uno, podemos negar el otro, ya que la disyunción es incluyente.
+
+    Esta falacia se llama _Afirmación del consecuente_.En el segundo caso las negaciones pueden ocultar que al negar un disyunto, terminamos negando también el otro, lo cual no tiene sentido.

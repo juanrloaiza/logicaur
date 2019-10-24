@@ -1,0 +1,41 @@
+- nombre: '{A v B, ~A, ~B}'
+  premisas:
+    - A v B
+    - ~A & ~B
+  conclusiones:
+    - texto: ~A
+      step: Simp 2
+    - texto: B
+      step: SD 1, 3
+    - texto: ~B
+      step: Simp 2
+
+- nombre: '{Q -> P, ~P & ~R, Q}'
+  premisas:
+    - Q -> P
+    - ~P & ~R
+    - Q
+  conclusiones:
+    - texto: ~P
+      step: Simp 2
+    - texto: ~Q
+      step: MT 1, 4
+    - texto: Q & ~Q
+      step: Conj 3, 5
+
+- nombre: '{~(P & Q), P & ~S, ~S -> Q}'
+  premisas:
+    - ~(P & Q)
+    - P & ~S
+    - ~S -> Q
+  conclusiones:
+    - texto: P
+      step: Simp 2
+    - texto: ~S
+      step: Simp 2
+    - texto: Q
+      step: MP 3, 5
+    - texto: P & Q
+      step: Conj 4, 6
+    - texto: ~(P & Q)
+      step: R 1

@@ -1,16 +1,25 @@
 {% assign ejercicios = site.data[page.data].ejercicios %}
 
 <div class="row">
-{% assign sonEjercicios = true %}
+  {% assign sonEjercicios = true %}
   {% for ejercicio in ejercicios %}
 
   {% assign nombre = ejercicio.objetivo  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" %}
 
+  {% if ejercicio.conjunto %}
+  <div class="deduccion col-4">
+    <span class="numero">{{ forloop.index }}</span>)&nbsp;
+
+  {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+  </div>
+
+  {% else %}
 
   {% assign premisas = ejercicio.premisas %}
   {% assign conclusiones = ejercicio.conclusiones %}
   {% include deduccion.html %}
 
+  {% endif %}
 
   {% endfor %}
 </div>

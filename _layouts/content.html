@@ -9,7 +9,7 @@
 
 <body>
   <div class="container">
-    <div style="margin-left: 2em"> 
+    <div style="margin-left: 2em">
 <a type="button" class="btn btn-light" href="{{ site.baseurl }}/">Atrás</a>
     </div>
 
@@ -29,9 +29,11 @@
 
         {% endif %}
 
+        {% unless page.ejercicios == 'manual' %}
         <h3>Ejercicios de práctica</h3>
         <hr>
         {% include ejercicios.html %}
+        {% endunless %}
 
       </div>
     </div>

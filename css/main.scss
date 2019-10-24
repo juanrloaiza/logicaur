@@ -8,11 +8,14 @@ $blue: #0000ff;
 @import 'nav';
 @import 'secciones';
 
+body {
+  padding: 5em;
+}
 
 .container {
   padding-top: 2em
 }
 
-h3 {
-  padding-top: 1em;
+h4 {
+  padding: 0.5em 0;
 }

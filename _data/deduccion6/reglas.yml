@@ -1,0 +1,18 @@
+- nombre: Composición bicondicional (CB)
+  reglas:
+    - premisas:
+        - P -> Q
+        - Q -> P
+      conclusiones:
+        - texto: P <-> Q
+          step: CB
+
+- nombre: Dilema (constructivo) (Dil)
+  reglas:
+    - premisas:
+        - P v Q
+        - P -> R
+        - Q -> R
+      conclusiones:
+        - texto: R
+          step: Dil

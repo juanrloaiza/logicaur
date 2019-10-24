@@ -1,0 +1,117 @@
+- premisas:
+    - Ana no es cantante
+  objetivo: Ana no es cantanta y bailarina
+
+- premisas:
+    - ~(Paa v Qba)
+  objetivo: ~Paa
+
+- premisas:
+    - ~(:existe:x)Px
+  objetivo: ~(:todo:x)px
+
+- premisas:
+    - ~~Pa
+  objetivo: Pa
+
+- premisas:
+    - Pa
+  objetivo: ~~Pa
+
+- premisas:
+    - Pa <-> ~Qa
+  objetivo: ~(Pa & Qa)
+
+- premisas:
+    - Pbb & ~Qaa
+  objetivo: ~(Pbb -> Qaa)
+
+- premisas:
+    - ~(Pba -> Qab)
+  objetivo: ~(Pba <-> Qab)
+
+- premisas:
+    - ~(:existe:x)Px & ~(:todo:x)Px
+  objetivo: ~Pa
+
+- premisas:
+    - Pa -> Qb
+    - ~Qb
+  objetivo: ~Pa
+
+- premisas:
+    - ~(Pa & Qa)
+    - Qa
+  objetivo: ~Pa
+
+- premisas:
+    - ~(:existe:)Qx
+    - (:todo:x)(Px -> Qx)
+  objetivo: ~Pa
+
+- premisas:
+    - (Pa & Qb) -> Rc
+    - Pa & ~Rc
+  objetivo: ~Qb
+
+- premisas:
+    - (Pb & ~Qa) -> Ra
+    - ~Ra
+  objetivo: Pb -> Qa
+
+- premisas:
+    - Qa
+    - ~Rb
+  objetivo: ~(Qa <-> Rb)
+
+- premisas:
+    - ~(Pb -> Qb)
+  objetivo: ~Qb
+
+- premisas:
+    - ~(Pb -> Qb)
+  objetivo: Pb
+
+- premisas:
+    - Pa -> Qb
+  objetivo: ~Qb -> ~Pa
+
+- premisas:
+    - Pa v Qa
+    - ~Qa
+  objetivo: Pa
+
+- premisas:
+    - Pa -> Pb
+    - Pb -> Pc
+  objetivo: ~Pc -> ~Pa
+
+- premisas:
+    - ~(Pb & Qa)-> ~(Ra v Sa)
+    - Ra
+  objetivo: Pb & Qa
+
+- premisas:
+    - Pa -> Qa
+    - ~Pa -> Ra
+    - Qa -> Ra
+  objetivo: Ra
+
+- premisas:
+    - Fa -> Ga
+    - ~Fa -> Ga
+  objetivo: Ga
+
+- premisas:
+    - Ap <-> ~Bq
+  objetivo: ~(Ap <-> Bq)
+
+- conjunto: '{Pr -> Qr, Pr, ~Qr}'
+- conjunto: '{As & Br, ~As v ~Br}'
+- conjunto: '{Nq v Mp, ~Mp & ~Nq}'
+- conjunto: '{Mp <-> Nq, Mp & ~Nq}'
+- conjunto: '{Pa, ~Pb, a=b}'
+- conjunto: '{(:existe:)Mx <-> ~(:existe:x)Mx}'
+- conjunto: '{~(Pa -> Qb), ~(Rc -> Pa)}'
+- conjunto: '{(:existe:x)Sx, ~(:existe:x)Sx}'
+- conjunto: '{(:todo:x)~Fx, (:todo:x)Fx}'

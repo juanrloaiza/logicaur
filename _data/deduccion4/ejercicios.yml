@@ -1,84 +1,77 @@
-- objetivo: Shakespeare no era pintor
+- objetivo: Si Leo es artista, canta
   premisas:
-    - Shakespeare era Francis Bacon
-    - Francis Bacon no era pintor
+    - Si Leo es artista, canta y baila
 
-- objetivo: Peter Parker se fotografía
+- objetivo: Si Leo es artista e ingeniera, canta
   premisas:
-    - Peter Parker fotografía a Spiderman
-    - Peter Parker es Spiderman
+    - Si Leo es artista, canta
 
-- objetivo: Pb v Pd
+- objetivo: Si Leo canta, es artista
   premisas:
-    - Pa v Pb
-    - ~Pc
-    - a = c
+    - Si Leo canta o baila, es artista
 
-- objetivo: ~Pd
+- objetivo: Si voy y hay música, bailo
   premisas:
-    - Pa <-> Pb
-    - ~Pc
-    - c = a
-    - d = b
+    - Si voy, bailo si hay música
 
-- objetivo: Tanto Alex como Dani pintan
+- objetivo: Bailo si hay música en caso de ir
   premisas:
-    - Todos pintan
+    - Si voy y hay música, bailo
 
-- objetivo: (Pa v Pb) v Pc
+- objetivo: Si no bailo, alguien canta
   premisas:
-    - (:todo:x)Px
+    - Bailo o canto
 
-- objetivo: Pa & Qa
+- objetivo: Manchas no es perro si no es mamífero
   premisas:
-    - (:todo:x)(Px & Qx)
+    - Los perros son mamíferos
 
-- objetivo: Pa & Qa
+- objetivo: Si nadie baila, no todos cantan
   premisas:
-    - (:todo:x)Px & Qa
+    - Si todos cantan, alguien baila
 
-- objetivo: Pa & Qb
+- objetivo: Si todos cantan, bailo
   premisas:
-    - (:todo:x)(Px & Qx)
+    - Si canto, bailo
 
-- objetivo: Pab
+- objetivo: Si voy, me pierdo
   premisas:
-    - (:todo:x)(:todo:y)Pxy
+    - Si no voy, no llevo mapa
+    - Si no llevo mapa, me pierdo
 
-- objetivo: Paa
+- objetivo: Si me pagan, me pongo triste si no vas
   premisas:
-    - (:todo:x)(:todo:y)Pxy)
+    - Si me pagan, voy
+    - Si yo voy y tú no, me pongo triste
 
-- objetivo: Pab v (Pa & Pb)
+- objetivo: Soy feliz
   premisas:
-    - (:todo:x)Px
+    - Si canto si bailo, soy feliz
+    - Canto si y solo si bailo
 
-- objetivo: Alex es socióloga
+- objetivo: Si nos pagan, vamos
   premisas:
-    - Solo los sociólogos son mamertos
-    - Alex es mamerta
+    - Si me pagan, voy
+    - Si te pagan, vas
 
-- objetivo: Dani no es sociólogo
+- objetivo: Iré a la fiesta si y solo si me pagaron
   premisas:
-    - Los sociólogos son mamertos
-    - Dani no es mamerto
+    - Iré a la fiesta solo si voy en taxi
+    - Iré en taxi a menos que no me paguen
 
-- objetivo: ~Qa
+- objetivo: Si tomo, me accidento
   premisas:
-    - (:todo:x)(Px <-> Qx)
-    - ~Pa
+    - Si tomo y manejo, me accidento
+    - Voy a manejar
 
-- objetivo: Pa
+- objetivo: Si todos hablan, Ale no escucha
   premisas:
-    - (:todo:x)(x = a)
-    - Pb
+    - Si todos hablan, nadie escucha
 
-- objetivo: (:existe:y)Pay
+- objetivo: Qa -> Pb
   premisas:
-    - (:todo:x)(:existe:y)Pxy
+    - ~Qa -> ~Pb
 
-- objetivo: Alguien se ama
+- objetivo: (:todo:x)Px -> Qa
   premisas:
-    - Alex se ama
-
-- objetivo: _Faltan ejercicios por transcribir. Fabio escribío 27._
+    - (:todo:x)(Px -> Qx)

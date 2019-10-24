@@ -1,12 +1,22 @@
-.error {
-  text-decoration: line-through;
-}
-
-.ejercicio {
+.deduccion {
   margin: 1em 0;
 
   .nombre {
     margin-bottom: 0.5em;
+  }
+
+  table {
+    min-width: 10em;
+  }
+
+  .step {
+    &.error {
+      text-decoration: line-through;
+      color: $red;
+    }
+
+    text-align: right;
+    color: $blue;
   }
 }
 

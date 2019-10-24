@@ -1,0 +1,110 @@
+- premisas:
+    - ~Pa -> ~Qb
+    - (Pa v Rc) -> (Qb & Sd)
+  objetivo: Pa <-> Qb
+
+- premisas:
+    - ~Pc v ~Qa
+    - ~Qa -> Pc
+  objetivo: Pc <-> ~Qa
+
+- premisas:
+    - Pbb -> (~Qa & Rb)
+    - Qa v Pbb
+  objetivo: Pbb <-> ~Qa
+
+- premisas:
+    - Pb -> ~Qa
+    - (:existe:x)~Qx -> (:todo:x)Px
+  objetivo: Pb <-> (:existe:x)~Qx
+
+- premisas:
+    - Pc -> Rc
+    - Qc -> Rc
+  objetivo: (Pc v Qc) -> Rc
+
+- premisas:
+    - (:todo:x)Px v ((:todo:x)Qx v (:todo:x)Rx)
+    - (:todo:x)Px -> Sa
+    - (:todo:x)Qx -> Sa
+    - (:todo:x)Rx -> Sa
+  objetivo: Sa
+
+- premisas:
+    - Todos patinan o nadie lo hace
+  objetivo: Juan patina o Ana no patina
+
+- premisas:
+    - Pa v Qb
+  objetivo: Qb v Pa
+
+- premisas:
+    - Pb v Qaa
+    - Pb -> Qaa
+  objetivo: Qaa
+
+- premisas:
+    - Pd <-> Qc
+    - Pd v Qc
+  objetivo: Pd & Qc
+
+- premisas:
+    - a = b v a = c
+    - Fb
+    - Fc
+  objetivo: Fa
+
+- premisas:
+    - ~Pa v ~(:todo:x)Qx
+    - (:existe:x)Rx -> Pa
+    - (:todo:x)Qx v ~(:existe:x)Rx
+  objetivo: ~(:existe:x)Rx
+
+- premisas:
+    - Ra v Qb
+    - Pa <-> Qb
+    - ~Ra <-> ~Pa
+  objetivo: Pa
+
+- premisas:
+    - ~Pb v ~Qb
+    - Ra -> Pb
+    - Ra -> Qb
+  objetivo: ~Ra
+
+- premisas:
+    - ~Pa v ~Qb
+    - Ra -> Pa
+    - Sb -> Qb
+  objetivo: ~Ra v ~Sb
+
+- premisas:
+    - Pac v (Qb & Sb)
+    - (Pac v Man) -> (:todo:x)Rxx
+    - Qb -> (:todo:y)Rqy
+  objetivo: Rqq
+
+- premisas:
+    - (:existe:x)Px v (:existe:x)Qx
+    - (:existe:x)Px -> (Ra & Ta)
+  objetivo:
+
+- premisas:
+    -
+  objetivo:
+
+- premisas:
+    -
+  objetivo:
+
+- premisas:
+    -
+  objetivo:
+
+- premisas:
+    -
+  objetivo:
+
+- premisas:
+    -
+  objetivo:

@@ -24,3 +24,89 @@
 - conjunto: 'Pa -> (Qa & Ra) :: (Pa -> Qa) & (Pa -> Ra)'
 - conjunto: '(Pa & Qa) -> Ra :: (Pa -> Ra) v (Qa -> Ra)'
 - conjunto: 'Pa -> (Qa v Ra) :: (Pa -> Qa) v (Pa -> Ra)'
+
+
+- premisas:
+  - Pa & Qa
+  objetivo: ~~Pa & Qa
+
+- premisas:
+  - Pa & Qa
+  objetivo: ~~(Pa & Qa)
+
+- premisas:
+  - ~(Pa v Qa)
+  objetivo: ~Pa
+
+- premisas:
+  - ~(Pa & Qa)
+  - Qa
+  objetivo: ~Pa
+
+- premisas:
+  - ~(Pa -> Qa)
+  objetivo: Pa
+
+- premisas:
+  - ~(Pa -> Qa)
+  objetivo: ~Qa
+
+- premisas:
+  - (Pa & Qa) -> (Ra & Sa)
+  - Qa & Pa
+  objetivo: Sa & Ra
+
+- premisas:
+  - (Pa & Qa) & Ra
+  - (Pa & Ra) -> Sa
+  objetivo: Sa & Sa
+
+- premisas:
+  - (Pa & Qa) v Ra
+  - (Pa & Ra) -> Sa
+  objetivo: Sa v Sa
+
+- premisas:
+  - (Fa & Gb) v Hc
+  - ~Gc
+  objetivo: Hc
+
+- premisas:
+  - (Fa v Gb) & Hc
+  - ~(Fa & Hc)
+  objetivo: Gb & Hc
+
+- premisas:
+  - ~Ap -> Bp
+  - (~Bp -> Ap) -> ~~Aq
+  objetivo: Aq
+
+- premisas:
+  - Pa & (Qa v Ra)
+  - (Pa & Qa) -> Sa
+  - (Pa & Ra) -> Sa
+  objetivo: Sa
+
+- premisas:
+  - Pa v (Qa & Ra)
+  - ~Qa
+  objetivo: Pa
+
+- premisas:
+  - Pa -> (Qa -> Ra)
+  - (~Pa v ~Qa) -> ~Ra
+  objetivo: (Pa & Qa <-> Ra)
+
+- premisas:
+  - (:existe:x)~Px
+  - ~(:existe:x)Px
+  objetivo: ~Pa
+
+- premisas:
+  - (:todo:x)~Px v (:todo:x)Px
+  - ~(:existe:x)~Px
+  objetivo: ~(:existe:x)Px
+
+- premisas:
+  - ~(:todo:x)(Px -> Qx)
+  objetivo: (:existe:x)(Px & ~Qx)

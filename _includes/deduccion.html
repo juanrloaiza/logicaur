@@ -7,7 +7,7 @@
     <span class="numero">{{ forloop.index }}</span>)
     {% endif %}
 
-    {{ nombre }}
+    {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
   </div>
   <table>
 

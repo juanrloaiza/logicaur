@@ -1,24 +1,11 @@
-<div class="ejercicio col-lg-4 col-sm-12">
-  <div class="nombre">
-    {{ regla_general.nombre }}
-  </div>
-  {% for regla in regla_general.reglas %}
-  <table rules="groups">
-    <thead>
-      {% for premisa in regla.premisas %}
-      <tr>
-        <td>{{ premisa | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-      </tr>
-      {% endfor %}
-    </thead>
-    <tbody>
-      {% for conclusion in regla.conclusiones %}
-      <tr>
-        <td>{{ conclusion | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <br>
-  {% endfor %}
-</div>
+{% assign nombre = regla_general.nombre %}
+
+{% for regla in regla_general.reglas %}
+
+{% assign premisas = regla.premisas %}
+{% assign conclusiones = regla.conclusiones %}
+
+{% include deduccion.html %}
+
+<br>
+{% endfor %}

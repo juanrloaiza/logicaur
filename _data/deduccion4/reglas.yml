@@ -1,0 +1,10 @@
+- nombre: Prueba condicional
+  reglas:
+    - premisas:
+      conclusiones:
+        - prueba:
+            premisas:
+              - P
+            conclusiones:
+              - Q
+        - P -> Q

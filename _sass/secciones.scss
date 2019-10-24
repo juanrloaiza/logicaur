@@ -1,0 +1,28 @@
+.error {
+  text-decoration: line-through;
+}
+
+.ejercicio {
+  margin: 1em 0;
+
+  .nombre {
+    margin-bottom: 0.5em;
+  }
+}
+
+.numero {
+  font-weight: bold;
+}
+
+.aclaracion {
+  margin-top: 2em;
+}
+
+.reglas {
+  justify-content: center;
+
+  .nombre {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+}

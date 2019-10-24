@@ -1,0 +1,21 @@
+- nombre: Sustitución
+  reglas:
+    - premisas:
+      - Pa
+      - a = b
+      conclusiones:
+        - P(b/a)
+
+- nombre: Instanciación
+  reglas:
+    - premisas:
+      - (:todo:x)P
+      conclusiones:
+        - P(a/x)
+
+- nombre: Generalización
+  reglas:
+    - premisas:
+      - P(a/x)
+      conclusiones:
+        - (:existe:x)P

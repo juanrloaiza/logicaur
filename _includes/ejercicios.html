@@ -1,30 +1,16 @@
 {% assign ejercicios = site.data[page.data].ejercicios %}
 
 <div class="row">
+{% assign sonEjercicios = true %}
   {% for ejercicio in ejercicios %}
-  <div class="ejercicio col-lg-4 col-sm-12">
-    <div class="objetivo">
-    <span class="numero">{{ forloop.index }}</span>) {{ ejercicio.objetivo  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
-    </div>
-    <table rules="groups">
-      <thead>
-        {% for premisa in ejercicio.premisas"%}
-        <tr>
-          <td>{{ premisa  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-        </tr>
-        {% endfor %}
-      </thead>
-      <tbody>
-        {% for conclusion in ejercicio.conclusiones %}
-        <tr>
-          <td>{{ conclusion  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-        </tr>
-        {% endfor %}
-        <tr>
-          <td>...</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
+  {% assign nombre = ejercicio.objetivo  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" %}
+
+
+  {% assign premisas = ejercicio.premisas %}
+  {% assign conclusiones = ejercicio.conclusiones %}
+  {% include deduccion.html %}
+
+
   {% endfor %}
 </div>

@@ -1,0 +1,84 @@
+- objetivo: Shakespeare no era pintor
+  premisas:
+    - Shakespeare era Francis Bacon
+    - Francis Bacon no era pintor
+
+- objetivo: Peter Parker se fotografía
+  premisas:
+    - Peter Parker fotografía a Spiderman
+    - Peter Parker es Spiderman
+
+- objetivo: Pb v Pd
+  premisas:
+    - Pa v Pb
+    - ~Pc
+    - a = c
+
+- objetivo: ~Pd
+  premisas:
+    - Pa <-> Pb
+    - ~Pc
+    - c = a
+    - d = b
+
+- objetivo: Tanto Alex como Dani pintan
+  premisas:
+    - Todos pintan
+
+- objetivo: (Pa v Pb) v Pc
+  premisas:
+    - (:todo:x)Px
+
+- objetivo: Pa & Qa
+  premisas:
+    - (:todo:x)(Px & Qx)
+
+- objetivo: Pa & Qa
+  premisas:
+    - (:todo:x)Px & Qa
+
+- objetivo: Pa & Qb
+  premisas:
+    - (:todo:x)(Px & Qx)
+
+- objetivo: Pab
+  premisas:
+    - (:todo:x)(:todo:y)Pxy
+
+- objetivo: Paa
+  premisas:
+    - (:todo:x)(:todo:y)Pxy)
+
+- objetivo: Pab v (Pa & Pb)
+  premisas:
+    - (:todo:x)Px
+
+- objetivo: Alex es socióloga
+  premisas:
+    - Solo los sociólogos son mamertos
+    - Alex es mamerta
+
+- objetivo: Dani no es sociólogo
+  premisas:
+    - Los sociólogos son mamertos
+    - Dani no es mamerto
+
+- objetivo: ~Qa
+  premisas:
+    - (:todo:x)(Px <-> Qx)
+    - ~Pa
+
+- objetivo: Pa
+  premisas:
+    - (:todo:x)(x = a)
+    - Pb
+
+- objetivo: (:existe:y)Pay
+  premisas:
+    - (:todo:x)(:existe:y)Pxy
+
+- objetivo: Alguien se ama
+  premisas:
+    - Alex se ama
+
+- objetivo: _Faltan ejercicios por transcribir. Fabio escribío 27._

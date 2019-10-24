@@ -2,42 +2,43 @@ errores:
   - premisas:
     - P -> Q
     conclusiones:
-      - - P
-        - Simpl 1
+      - texto: P
+        step: Simpl 1
 
   - premisas:
     - P -> Q
     conclusiones:
-      - - Q
-        - Simpl 1
+      - texto: Q
+        step: Simpl 1
+        
   - nombre: Falacia de afirmación del consecuente
     premisas:
     - P -> Q
     - Q
     conclusiones:
-      - - P
-        - MP 1 y 2
+      - texto: P
+        step: MP 1 y 2
 
   - nombre: Falacia de negación del antecedente
     premisas:
     - P -> Q
     - ~P
     conclusiones:
-      - - ~Q
-        - Simpl 1
+      - texto: ~Q
+        step: Simpl 1
 
   - premisas:
     - ~(P -> Q)
     - P
     conclusiones:
-      - - Q
-        - MP 1 y 2
+      - texto: Q
+        step: MP 1 y 2
 
   - premisas:
     - ~(P <-> Q)
     conclusiones:
-      - - ~(P -> Q)
-        - DB 1
+      - texto: ~(P -> Q)
+        step: DB 1
 
 
 aclaraciones:

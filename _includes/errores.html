@@ -2,33 +2,20 @@
 
 <div class="row">
   {% for error in errores.errores %}
-  <div class="aclaracion">
+
+  {% if errores.aclaraciones[forloop.index] %}
+  <div class="aclaracion col-12">
     {{ errores.aclaraciones[forloop.index] | markdownify }}
   </div>
-  <div class="ejercicio col-lg-4 col-sm-12">
-    {{ error.nombre }}
-    <table rules="groups" class="terrores">
-      <thead>
-        {% assign steps = 1 %}
-        {% for premisa in error.premisas %}
-        <tr>
-          <td>{{ steps }}</td>
-          <td>{{ premisa | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-        </tr>
-        {% assign steps = steps | plus: 1%}
-        {% endfor %}
-      </thead>
-      <tbody>
-        {% for conclusion in error.conclusiones %}
-        <tr>
-          <td>{{ steps }}</td>
-          <td>{{ conclusion[0] | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-          <td class="error">{{ conclusion[1] | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
-        </tr>
-        {% assign steps = steps | plus: 1%}
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+  {% endif %}
+
+  {% assign isError = true %}
+  {% assign nombre = error.nombre %}
+  {% assign premisas = error.premisas %}
+  {% assign conclusiones = error.conclusiones %}
+
+  {% include deduccion.html %}
+
+
   {% endfor %}
 </div>

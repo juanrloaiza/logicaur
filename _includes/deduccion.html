@@ -1,0 +1,100 @@
+<!-- REQUIERE ASIGNAR PREMISAS Y CONCLUSIONES-->
+
+<div class="ejercicio col-lg-3 col-sm-12">
+  <div class="nombre">
+  {% if sonEjercicios %}
+
+<span class="numero">{{ forloop.index }}</span>)
+  {% endif %}
+
+  {{ nombre }}
+</div>
+  <table rules="groups">
+    <colgroup>
+  <col style="width:4%">
+  <col style="width:1%">
+  <col style="width:65%">
+  <col style="width:30%">
+</colgroup>
+
+    <thead>
+      <!-- Ponemos contador de paso -->
+      {% assign steps = 1 %}
+
+      <!-- Ponemos las premisas -->
+      {% for premisa in premisas %}
+      <tr class="premisa">
+        <td> {{steps}} </td>
+        {% assign steps = steps | plus: 1 %}
+        <td colspan="3">{{ premisa  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
+      </tr>
+      {% endfor %}
+    </thead>
+
+    <!-- Ponemos las conclusiones -->
+    <tbody>
+      {% if conclusiones == nil %}
+      <td></td>
+        <td>...</td>
+      {% endif %}
+
+      {% for conclusion in conclusiones %}
+
+      <!-- Si la conclusión es una prueba auxiliar -->
+      {% if conclusion.prueba %}
+
+        <!-- Ponemos las premisas -->
+        {% for premisa in conclusion.prueba.premisas %}
+        <tr class="prueba-auxiliar premisa">
+          <td> {{steps}} </td>
+          {% assign steps = steps | plus: 1 %}
+
+          <td></td>
+          <td colspan="2">{{ premisa  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}</td>
+        </tr>
+        {% endfor %}
+
+        <!-- Ponemos las conclusiones -->
+        {% for subconclusion in conclusion.prueba.conclusiones %}
+        <tr class="prueba-auxiliar">
+          <td>{{ steps }}</td>
+          {% assign steps = steps | plus: 1 %}
+
+          <td></td>
+          <!-- Si la conclusión tiene información de qué paso es -->
+          {% if subconclusion.step %}
+          <td>{{subconclusion.texto}}</td>
+          <td {% if isError %}class="error"{% endif %}>{{ subconclusion.step }}</td>
+
+          <!-- si la conclusión no tiene información del paso -->
+          {% else %}
+          <td colspan="2">{{ subconclusion }}</td>
+
+          {% endif %}
+        </tr>
+        {% endfor %}
+
+      <!-- Si la conclusión no es una prueba -->
+      {% else %}
+      <tr>
+        <td>{{ steps }}</td>
+        {% assign steps = steps | plus: 1 %}
+
+
+        <!-- Si la conclusión tiene información de qué paso es -->
+        {% if conclusion.step %}
+          <td colspan="2">{{conclusion.texto}}</td>
+          <td {% if isError %}class="error"{% endif %}>{{ conclusion.step }}</td>
+
+        <!-- si la conclusión no tiene información del paso -->
+        {% else %}
+        <td colspan="3">{{ conclusion }}</td>
+
+        {% endif %}
+      </tr>
+      {% endif %}
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

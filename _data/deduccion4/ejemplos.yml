@@ -1,0 +1,36 @@
+- premisas:
+    - Hay penalti solo si hay falta
+    - No hay falta
+  conclusiones:
+    - No hay penalti
+
+- premisas:
+    - (Pb & Qa) v (Rb & Sa)
+    - (Rb & Sa) -> Pa
+    - ~Pa
+  conclusiones:
+    - Pb
+
+- premisas:
+    - (Pa & Pb) <-> (Pc v Pd)
+    - Pc & ~Qa
+  conclusiones:
+    - Pb & ~Qa
+
+- premisas:
+    - (:todo:x)[(Sx v Ax) -> (Nx & Lx)]
+  conclusiones:
+    - prueba:
+        premisas:
+          - Am
+        conclusiones:
+          - texto: (Sm v Am) -> (Nm & Lm)
+            step: Inst 1
+          - texto: Sm v Am
+            step: Add 2
+          - texto: Nm & Lm
+            step: MP 3, 4
+          - texto: Nm
+            step: Simp 5
+    - texto: Am -> Nm
+      step: PC 2-6

@@ -87,24 +87,25 @@
 - premisas:
     - (:existe:x)Px v (:existe:x)Qx
     - (:existe:x)Px -> (Ra & Ta)
-  objetivo:
+    - (:existe:x)Qx -> (~Sa & Ra)
+  objetivo: Ra
 
 - premisas:
-    -
-  objetivo:
+    - (Pa & Oa) v (Qa & Na)
+    - Pa -> (Ra & Ta)
+    - Qa -> (Ra & Sa)
+  objetivo: Ta v Sa
 
 - premisas:
-    -
-  objetivo:
+    - (:todo:x)Px v (:todo:x)~Px
+    - (:todo:x)Px -> (:existe:x)Qx
+    - (:todo:x)~Px -> (:existe:x)~Qx
+  objetivo: (:existe:x)Qx v (:existe:x)~Qx
 
 - premisas:
-    -
-  objetivo:
+    - (Pa & Qa) v (Pa & Ra)
+  objetivo: Pa & (Qa v Ra)
 
 - premisas:
-    -
-  objetivo:
-
-- premisas:
-    -
-  objetivo:
+    - Pa & (Qb v Rc)
+  objetivo: (Pa & Qb) v (Pa & Rc)

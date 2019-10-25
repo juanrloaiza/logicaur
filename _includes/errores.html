@@ -9,13 +9,24 @@
   </div>
   {% endif %}
 
-  {% assign isError = true %}
-  {% assign nombre = error.nombre %}
-  {% assign premisas = error.premisas %}
-  {% assign conclusiones = error.conclusiones %}
+  <div class="deduccion col-4">
+    <div class="nombre">
+      {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    </div>
 
-  {% include deduccion.html %}
+    {% if ejercicio.conjunto %}
+    {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    {% else %}
 
+    {% assign isError = true %}
+    {% assign nombre = error.nombre %}
+    {% assign premisas = error.premisas %}
+    {% assign conclusiones = error.conclusiones %}
 
+    {% include deduccion.html %}
+
+    {% endif %}
+
+  </div>
   {% endfor %}
 </div>

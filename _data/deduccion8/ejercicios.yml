@@ -1,0 +1,14 @@
+- premisas:
+  - (:todo:x)(Px -> Qx)
+  - (:todo:x)Px
+  objetivo: (:todo:x)Qx
+
+- premisas:
+  - (∀x)(Px → Qx)
+  - (∀x)(Qx → Rx)
+  objetivo: (∀x)(Px → Rx)
+
+- premisas:
+  - Pa
+  - (∃x)Qx
+  objetivo: (∃x)(∃y)(Px & Qy)

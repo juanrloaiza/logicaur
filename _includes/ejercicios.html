@@ -6,18 +6,23 @@
 
   {% assign nombre = ejercicio.objetivo  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" %}
 
-  {% if ejercicio.conjunto %}
-  <div class="deduccion col-4">
-    <span class="numero">{{ forloop.index }}</span>)&nbsp;
+  <div class="deduccion col-lg-4 col-md-6">
+    <div class="nombre">
+      <span class="numero">{{ forloop.index }}</span>)&nbsp;
+      {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    </div>
 
-  {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    {% if ejercicio.conjunto %}
+    {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    {% else %}
+
+    {% assign premisas = ejercicio.premisas %}
+    {% assign conclusiones = ejercicio.conclusiones %}
+
+
+    {% include deduccion.html %}
+
   </div>
-
-  {% else %}
-
-  {% assign premisas = ejercicio.premisas %}
-  {% assign conclusiones = ejercicio.conclusiones %}
-  {% include deduccion.html %}
 
   {% endif %}
 

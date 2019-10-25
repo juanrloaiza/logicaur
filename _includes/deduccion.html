@@ -1,14 +1,5 @@
 <!-- REQUIERE ASIGNAR PREMISAS Y CONCLUSIONES-->
 
-<div class="deduccion col-4">
-  <div class="nombre">
-    {% if sonEjercicios %}
-
-    <span class="numero">{{ forloop.index }}</span>)
-    {% endif %}
-
-    {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
-  </div>
   <table>
 
 
@@ -92,4 +83,3 @@
       {% endfor %}
     </tbody>
   </table>
-</div>

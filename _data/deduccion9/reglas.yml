@@ -1,0 +1,33 @@
+- nombre: Modus Ponendo Tollens
+  reglas:
+    - premisas:
+        - ~(A & B)
+        - A
+      conclusiones:
+        - ~ B
+
+- nombre: Silogismo hipotético (SH)
+  reglas:
+    - premisas:
+      - A → B
+      - B → C
+      conclusiones:
+        - A → C
+
+- nombre: Dilema destructivo
+  reglas:
+    - premisas:
+      - A → C
+      - B → D
+      - ~C v ~D
+      conclusiones:
+        - A v ~B
+
+- nombre: Idempotencia
+  reglas:
+    - conjunto: 'P :: P & P'
+    - conjunto: 'P :: P v P'
+
+- nombre: Absorción
+  reglas:
+    - conjunto: 'P -> Q :: P -> (Q & P)'

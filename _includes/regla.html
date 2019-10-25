@@ -3,10 +3,28 @@
 {% assign isRegla = true %}
 {% for regla in regla_general.reglas %}
 
-{% assign premisas = regla.premisas %}
-{% assign conclusiones = regla.conclusiones %}
+{% if forloop.index == 1 %}
+<div class="deduccion col-lg-4 col-md-6">
+  <div class="nombre">
+    {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+  </div>
+  {% endif %}
 
-{% include deduccion.html %}
+  {% if regla.conjunto %}
 
+  {{ regla.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+
+  {% else %}
+
+  {% assign premisas = regla.premisas %}
+  {% assign conclusiones = regla.conclusiones %}
+  {% include deduccion.html %}
+
+  {% endif %}
+
+  {% if regla == regla_general.reglas.last  %}
+</div>
+{% else %}
 <br>
+{% endif %}
 {% endfor %}

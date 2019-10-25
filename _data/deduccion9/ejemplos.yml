@@ -1,0 +1,28 @@
+- premisas:
+  conclusiones:
+    - prueba:
+        premisas:
+          - Pa
+        conclusiones:
+          - texto: ~~Pa
+            step: DN 1
+    - texto: Pa -> ~~Pa
+      step: PC 1-2
+
+- premisas:
+  conclusiones:
+    - prueba:
+        premisas:
+          - ~(Pa v ~Pa)
+        conclusiones:
+          - texto: ~Pa & ~~Pa
+            step: DeM 1
+    - texto: Pa v ~Pa
+      step: Ra 1-2
+
+- premisas:
+  conclusiones:
+    - texto: a = a
+      step: PI
+    - texto: (:todo:x)(x = x)
+      step: Univ 1

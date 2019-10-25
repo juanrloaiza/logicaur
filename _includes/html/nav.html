@@ -8,19 +8,20 @@
 
     <div class="collapse navbar-collapse" id='theNav'>
       <ul class="navbar-nav mr-auto">
+
         {% for item in site.collections %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropbdown-toggle" href="#" id="{{ item.title }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropbdown-toggle" href="#" id="{{ item.label }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ item.title }}
           </a>
-          <div class="dropdown-menu" ria-labelledby="{{ item.title }}">
-              {% for entry in item.docs %}
-                <a class="dropdown-item">{{ entry }}</a>
-
-                {% endfor %}
-            </div>
+          <div class="dropdown-menu" aria-labelledby="{{ item.label }}">
+            {% for i in site[item.label] %}
+            <a class="dropdown-item" href="{{ site.baseurl }}/{{ i.url }}">{{ i.title }}</a>
+            {% endfor %}
+          </div>
         </li>
         {% endfor %}
+
       </ul>
     </div>
   </div>

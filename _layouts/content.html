@@ -13,35 +13,28 @@
 </head>
 
 <body>
+  {% include nav.html %}
+  
   <div class="container">
-    <div style="margin-left: 2em">
-      <a type="button" class="btn btn-light" href="{{ site.baseurl }}/">Atrás</a>
-    </div>
+    <p class="lead">{{ page.subtitle }}</p>
+    <h1>{{ page.title }}</h1>
+    <hr>
+    {{ content }}
 
-    <div id="content" class="col-12">
-      <div class="container">
+    {% if site.data[page.data].errores %}
 
-        <p class="lead">{{ page.subtitle }}</p>
-        <h1>{{ page.title }}</h1>
-        <hr>
-        {{ content }}
+    <h3>Errores comunes</h3>
+    <hr>
+    {% include errores.html %}
 
-        {% if site.data[page.data].errores %}
+    {% endif %}
 
-        <h3>Errores comunes</h3>
-        <hr>
-        {% include errores.html %}
+    {% unless page.ejercicios == 'manual' %}
+    <h3>Ejercicios de práctica</h3>
+    <hr>
+    {% include ejercicios.html %}
+    {% endunless %}
 
-        {% endif %}
-
-        {% unless page.ejercicios == 'manual' %}
-        <h3>Ejercicios de práctica</h3>
-        <hr>
-        {% include ejercicios.html %}
-        {% endunless %}
-
-      </div>
-    </div>
   </div>
 
 </body>

@@ -1,5 +1,27 @@
-<ul class="nav flex-column">
-  {% for item in site.data.nav %}
-  <li class="nav-item">{{ item }}</li>
-  {% endfor %}
-</ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary align-middle">
+  <div class="container" style='padding-top: 0'>
+    <a class="nav-brand mb-0 h5" href="{{ site.baseurl }}/">Lógica UR</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theNav" aria-controls="theNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id='theNav'>
+      <ul class="navbar-nav mr-auto">
+        {% for item in site.collections %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropbdown-toggle" href="#" id="{{ item.title }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ item.title }}
+          </a>
+          <div class="dropdown-menu" ria-labelledby="{{ item.title }}">
+              {% for entry in item.docs %}
+                <a class="dropdown-item">{{ entry }}</a>
+
+                {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

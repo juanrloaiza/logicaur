@@ -10,7 +10,7 @@ errores:
     conclusiones:
       - texto: Q
         step: Simpl 1
-        
+
   - nombre: Falacia de afirmación del consecuente
     premisas:
     - P -> Q
@@ -42,6 +42,12 @@ errores:
 
 
 aclaraciones:
-  1: De un condicional por sí solo no se sigue ninguna de sus dos partes
-  3: Estas inferencias _parecen_ correctas pero son falaces porque la conclusión no se sigue de las premisas necesariamente.
-  5: El condicional o el bicondicional debe ser el operador lógico principal.
+  1:
+    fin: 2
+    texto: De un condicional por sí solo no se sigue ninguna de sus dos partes
+  3:
+    fin: 4
+    texto: Estas inferencias _parecen_ correctas pero son falaces porque la conclusión no se sigue de las premisas necesariamente.
+  5:
+    fin: 6
+    texto: El condicional o el bicondicional debe ser el operador lógico principal.

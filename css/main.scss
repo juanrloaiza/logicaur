@@ -1,8 +1,12 @@
 ---
 ---
 // Colores
-$red: #ff0000;
-$blue: #0000ff;
+$primary: #b20921;
+
+$red: $primary;
+$blue: #3e3ec0;
+
+
 
 @import 'tablas';
 @import 'nav';
@@ -15,4 +19,10 @@ $blue: #0000ff;
 
 h4 {
   padding: 0.5em 0;
+}
+
+#content {
+  a {
+    color: $primary;
+  }
 }

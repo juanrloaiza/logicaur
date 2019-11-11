@@ -25,7 +25,6 @@
 - conjunto: '(Pa & Qa) -> Ra :: (Pa -> Ra) v (Qa -> Ra)'
 - conjunto: 'Pa -> (Qa v Ra) :: (Pa -> Qa) v (Pa -> Ra)'
 
-
 - premisas:
   - Pa & Qa
   objetivo: ~~Pa & Qa

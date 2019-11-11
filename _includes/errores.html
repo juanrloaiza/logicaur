@@ -1,32 +1,46 @@
 {% assign errores = site.data[page.data].errores %}
 
 <div class="row">
-  {% for error in errores.errores %}
 
-  {% if errores.aclaraciones[forloop.index] %}
-  <div class="aclaracion col-12">
-    {{ errores.aclaraciones[forloop.index] | markdownify }}
-  </div>
-  {% endif %}
+  <div class="row">
+        {% for error in errores.errores %}
 
-  <div class="deduccion col-4">
-    <div class="nombre">
-      {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+    {% if errores.aclaraciones[forloop.index] %}
+    {% assign closingCounter = errores.aclaraciones[forloop.index].fin %}
+    <div class="aclaracion card col-md-4 col-10">
+      <div class="card-body">
+        {{ errores.aclaraciones[forloop.index].texto | markdownify }}
+      </div>
     </div>
-
-    {% if ejercicio.conjunto %}
-    {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
-    {% else %}
-
-    {% assign isError = true %}
-    {% assign nombre = error.nombre %}
-    {% assign premisas = error.premisas %}
-    {% assign conclusiones = error.conclusiones %}
-
-    {% include deduccion.html %}
-
+    <div class="row col align-center">
     {% endif %}
 
+
+      <div class="deduccion col-lg-4 col-sm-6">
+        <div class="nombre">
+          {{ nombre | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+        </div>
+
+        {% if ejercicio.conjunto %}
+        {{ ejercicio.conjunto  | replace: "<->", "↔" | replace: "->", "→" | replace: ":existe:", "∃" | replace: ":todo:", "∀" }}
+        {% else %}
+
+        {% assign isError = true %}
+        {% assign nombre = error.nombre %}
+        {% assign premisas = error.premisas %}
+        {% assign conclusiones = error.conclusiones %}
+
+        {% include deduccion.html %}
+
+        {% endif %}
+      </div>
+      {% if forloop.index == closingCounter %}
+    </div>
+    </div>
+
+    <div class="row">
+      {% endif %}
+
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
-</div>
